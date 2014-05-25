@@ -4,6 +4,7 @@
 This code book describes the variables, the data, and transformations that script performed to clean up the data.
 
 ###Data input
+Data are reading from local directory or url source. Url source would use when the local data was unavailable.
 **Script read 9 files:**
 - y_test.txt - File contains test labels of data. 
 - X_test.txt - File contains test set of data.
@@ -13,6 +14,15 @@ This code book describes the variables, the data, and transformations that scrip
 - subject_train.txt - Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 - features.txt - List of all features.
 - activity_labels.txt - Links the class labels with their activity name.
+
+###Transformation
+1. Testing and training data are join together.
+<pre><code>
+y<-rbind(y_test,y_train)
+x<-rbind(x_test,x_train)
+subject<-rbind(subject_test,subject_train)
+</code></pre>
+
 
 
 
