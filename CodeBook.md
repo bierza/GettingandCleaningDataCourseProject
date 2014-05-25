@@ -57,4 +57,4 @@ When the user use function run_analysis(save_to_file=T) with argument save_to_fi
 ###Sources:
 - Source data are from url "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip".
 - Full description are on "http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones".
-- Files description is on https://github.com/bierza/GettingandCleaningDataCourseProject/blob/master/description_of_data_source
+- Files description is on "https://github.com/bierza/GettingandCleaningDataCourseProject/blob/master/description_of_data_source".
