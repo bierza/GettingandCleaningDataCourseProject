@@ -12,7 +12,7 @@ Data are read from local directory or url source. Url source would use when the 
 - x_train.txt - File contains training set of data.
 - subject_test.txt - Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 - subject_train.txt - Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-- features.txt - List of all features.
+- features.txt - List of all features (columns names).
 - activity_labels.txt - Links the class labels with their activity name.
 
 ###Transformation
@@ -47,10 +47,10 @@ datay<-ymergeordered[3]</code></pre>
 7. Create data set with the average of each variable for each activity and each subject.
 <pre><code>setkeyv(data, c("activity","subject"))
 finaldata<-data[, lapply(.SD,mean), by =key(data)]</code></pre>
-
-
-
-
+####More about columns labels.
+The script read all labels from file features.txt. First step is make names "English-like descriptive". The second step is select only columns with could be about mean and std. Vše je automaticky načtené a transformované. Script neobsahuje pevně definované proměnné.
+###Data output
+When the user use function run_analysis(save_to_file=T) with argument save_to_file set to TRUE than the script would save two files. First file comletedata.txt contains all tidy data set. Second file finaldata.txt contain tidy data set with the average of each variable for each activity and each subject.
 
 ###Sources:
 - Source data are from url "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip".
