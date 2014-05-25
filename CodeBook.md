@@ -47,7 +47,7 @@ datay<-ymergeordered[3]</code></pre>
 7. Create data set with the average of each variable for each activity and each subject.
 <pre><code>setkeyv(data, c("activity","subject"))
 finaldata<-data[, lapply(.SD,mean), by =key(data)]</code></pre>
-####More about columns labels.
+**More about columns labels.**
 The script read all labels from file features.txt. First step is make names "English-like descriptive". The second step is select only columns with could be about mean and std. Vše je automaticky načtené a transformované. Script neobsahuje pevně definované proměnné.
 ###Data output
 When the user use function run_analysis(save_to_file=T) with argument save_to_file set to TRUE than the script would save two files. First file comletedata.txt contains all tidy data set. Second file finaldata.txt contain tidy data set with the average of each variable for each activity and each subject.
