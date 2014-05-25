@@ -38,6 +38,6 @@ Function run_analysis from R script called run_analysis.R that does the followin
 
 ###Others information
 - The script was tested on Mac with OS X 10.9.2.
-- Windows could have problem with diffrent path system (Windows "C:\data\R\" Mac "./data/R/"). Script download data file in this case.
+- Windows could have problem with diffrent path system (Windows "C:\data\R\" Mac "./data/R/"). Script download data file in this case to temporary variable.
 - When data.table package isn`t instaled than script would install data.table package.
 - When script didn`t find data for load than script would download zip file to temporary value.
