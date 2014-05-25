@@ -11,14 +11,29 @@ Function run_analysis from R script called run_analysis.R that does the followin
 
 ###Recommendation
 **This is only recommendation** for running function faster (without downloading zip data file and package data.table)
-- Set working directory to place where you download and unzip data for the project (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
-- install package data.table.
+- Set working directory to place where you download and unzip data for the project (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). 
+- In the working directory you can find those files and folders:
+-- test 
+- Install package data.table.
 
 ###Example how to use script
 ####Simple example
 1. Download "run_analysis.R"
 2. Load script to your console *source("run_analysis.R")*.
-3. Run function run_analysis *run_analysis()*
+3. Run function run_analysis *data<-run_analysis()*
+**What happens:**
+- run_analysis() put tidy data set with the average of each variable for each activity and each subject to variable data.
+
+####Complete example
+1. Download "run_analysis.R"
+2. Load script to your console *source("run_analysis.R")*.
+3. Run function run_analysis *data<-run_analysis(sour_dir="./loaddata/",dest_dir="./savedata/",save_to_file=T)*
+**What happens:**
+- load data from directory "./loaddata/"
+- run_analysis() put tidy data set with the average of each variable for each activity and each subject to variable data.
+- save comlete merge data to file "./savedata/comletedata.txt"
+- save data set with the average of each variable for each activity and each subject to file "./savedata/finaldata.txt"
+
 
 ###Others information
 - The script was tested on Mac with OS X 10.9.2.
