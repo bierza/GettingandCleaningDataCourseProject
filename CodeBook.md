@@ -42,7 +42,7 @@ ymerge<-merge(y,activity_labels,by.x="idactivity",by.y="idactivity",sort=F)
 ### Sort merged data to original sorting by added idrow.
 ymergeordered<-ymerge[order(ymerge[2]),]
 datay<-ymergeordered[3]</code></pre>
-6. Create one data set from Y, X, activity and subject.
+6. Create one data set from X, activity and subject.
 <pre><code>data<-as.data.table(cbind(datax,datay,subject))</code></pre>
 7. Create data set with the average of each variable for each activity and each subject.
 <pre><code>setkeyv(data, c("activity","subject"))
