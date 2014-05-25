@@ -12,8 +12,7 @@ Function run_analysis from R script called run_analysis.R that does the followin
 ###Recommendation
 **This is only recommendation** for running function faster (without downloading zip data file and package data.table)
 - Set working directory to place where you download and unzip data for the project (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). 
-- In the working directory you can find those files and folders:
--- test 
+- In the working directory you can find those files and folders: features.txt, activity_labels.txt, test and train.
 - Install package data.table.
 
 ###Example how to use script
