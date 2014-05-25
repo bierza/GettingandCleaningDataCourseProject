@@ -31,12 +31,13 @@ Function run_analysis from R script called run_analysis.R that does the followin
 
 **What happens:**
 - load data from directory "./loaddata/"
-- run_analysis() put tidy data set with the average of each variable for each activity and each subject to variable data.
+- function run_analysis put tidy data set with the average of each variable for each activity and each subject to variable data.
 - save comlete merge data to file "./savedata/comletedata.txt"
 - save data set with the average of each variable for each activity and each subject to file "./savedata/finaldata.txt"
 
 
 ###Others information
 - The script was tested on Mac with OS X 10.9.2.
+- Windows could have problem with diffrent path system (Windows "C:\data\R\" Mac "./data/R/"). Script download data file in this case.
 - When data.table package isn`t instaled than script would install data.table package.
 - When script didn`t find data for load than script would download zip file to temporary value.
