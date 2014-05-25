@@ -5,10 +5,10 @@ run_analysis <- function(sour_dir="./",dest_dir="./",save_to_file=F){
 	library(data.table)
 
 	## Check if all files are available. If not, files will be downloaded to temporary variable.
-	if(9<sum(file.exists(
+	if(sum(file.exists(
 		paste(sour_dir,"test/y_test.txt",sep=""),paste(sour_dir,"test/y_test.txt",sep=""),paste(sour_dir,"test/X_test.txt",sep=""),paste(sour_dir,"train/y_train.txt",sep=""),paste(sour_dir,
 		"train/x_train.txt",sep=""),paste(sour_dir,"test/subject_test.txt",sep=""),paste(sour_dir,"train/subject_train.txt",sep=""),paste(sour_dir,"features.txt",sep=""),paste(sour_dir,"activity_labels.txt",sep="")
-		))) {
+		))<9) {
 		### Downloading zfp to temp variable.
 		temp <- tempfile()
 		fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
