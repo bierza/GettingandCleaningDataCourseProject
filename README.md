@@ -10,7 +10,7 @@ Function run_analysis from R script called run_analysis.R that does the followin
 - Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 ###Recommendation
-**This is only recommendation* for running function faster (without downloading zip data file and package data.table)
+**This is only recommendation** for running function faster (without downloading zip data file and package data.table)
 - Set working directory to place where you download and unzip data for the project (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 - install package data.table.
 
