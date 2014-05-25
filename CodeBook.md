@@ -17,11 +17,9 @@ Data are reading from local directory or url source. Url source would use when t
 
 ###Transformation
 1. Testing and training data are join together.
-<pre><code>
-y<-rbind(y_test,y_train)
+<pre><code>y<-rbind(y_test,y_train)
 x<-rbind(x_test,x_train)
-subject<-rbind(subject_test,subject_train)
-</code></pre>
+subject<-rbind(subject_test,subject_train)</code></pre>
 
 
 
