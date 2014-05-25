@@ -17,7 +17,7 @@ Function run_analysis from R script called run_analysis.R that does the followin
 
 ###Example how to use script
 ####Simple example
-1. Download "run_analysis.R"
+1. Download "run_analysis.R" to working directory of R console.
 2. Load script to your console *source("run_analysis.R")*.
 3. Run function run_analysis *data<-run_analysis()*
 **What happens:**
@@ -36,3 +36,5 @@ Function run_analysis from R script called run_analysis.R that does the followin
 
 ###Others information
 - The script was tested on Mac with OS X 10.9.2.
+- When data.table package isn`t instaled than script would install data.table package.
+- When script didn`t find data for load than script would download zip file to temporary value.
