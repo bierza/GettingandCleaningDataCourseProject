@@ -4,7 +4,7 @@
 This code book describes the variables, the data, and transformations that script performed to clean up the data.
 
 ###Data input
-Data are reading from local directory or url source. Url source would use when the local data was unavailable.
+Data are read from local directory or url source. Url source would use when the local data was unavailable.
 **Script read 9 files:**
 - y_test.txt - File contains test labels of data. 
 - X_test.txt - File contains test set of data.
@@ -20,12 +20,15 @@ Data are reading from local directory or url source. Url source would use when t
 <pre><code>y<-rbind(y_test,y_train)
 x<-rbind(x_test,x_train)
 subject<-rbind(subject_test,subject_train)</code></pre>
-2. Prepare English-like descriptive names of columns. The names have all letters small. The names are without symbol like "[-(),]"
+2. Prepare English-like descriptive names of columns. The names of all letters are  small. The names are without symbol like "[-(),]"
 <pre><code>#### all letters are small 
 a<-tolower(features[,2])
 #### all names are without characters "[-(),]" 
 b<-gsub("[-(),]","",a)
 names(x)<-b</code></pre>
+3. Extracts only the measurements on the mean and standard deviation for each measurement. (only columns with std or mean included in name)
+<pre><code>c<-grep("std|mean",b)
+datax<-x[,c]</code></pre>
 
 
 
