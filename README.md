@@ -8,3 +8,7 @@ Function run_analysis from R script called run_analysis.R that does the followin
 - Uses descriptive activity names to name the activities in the data set
 - Appropriately labels the data set with descriptive activity names. 
 - Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+
+###Example how to use script
+1. Download "run_analysis.R"
+2. Load to your console (<!----> source("run_analysis.R")).
