@@ -26,10 +26,12 @@ a<-tolower(features[,2])
 #### all names are without characters "[-(),]" 
 b<-gsub("[-(),]","",a)
 names(x)<-b</code></pre>
-3. Extracts only the measurements on the mean and standard deviation for each measurement. (only columns with std or mean included in name)
+3. Add descriptive names of columns of subject data.
+<pre><code>names(subject)<-"subject"</code></pre>
+4. Extracts only the measurements on the mean and standard deviation for each measurement. (only columns with std or mean included in name)
 <pre><code>c<-grep("std|mean",b)
 datax<-x[,c]</code></pre>
-4. Replace numbers from y_train and y_test by words from activity_labels file.
+5. Replace numbers from y_train and y_test by words from activity_labels file.
 <pre><code>### Add row for sorting after merge with names of activity.
 y$idrow  <- 1:nrow(y)
 ### Add columns names.
@@ -40,6 +42,7 @@ ymerge<-merge(y,activity_labels,by.x="idactivity",by.y="idactivity",sort=F)
 ### Sort merged data to original sorting by added idrow.
 ymergeordered<-ymerge[order(ymerge[2]),]
 datay<-ymergeordered[3]</code></pre>
+
 
 
 
