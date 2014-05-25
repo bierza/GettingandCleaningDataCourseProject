@@ -26,7 +26,7 @@ a<-tolower(features[,2])
 #### all names are without characters "[-(),]" 
 b<-gsub("[-(),]","",a)
 names(x)<-b</code></pre>
-3. Add descriptive names of columns of subject data.
+3. Add descriptive name of column of subject data.
 <pre><code>names(subject)<-"subject"</code></pre>
 4. Extracts only the measurements on the mean and standard deviation for each measurement. (only columns with std or mean included in name)
 <pre><code>c<-grep("std|mean",b)
