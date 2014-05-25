@@ -71,7 +71,9 @@ run_analysis <- function(sour_dir="./",dest_dir="./",save_to_file=F){
 
 	## One dataset from Y, X, activity and subject files 
 	data<-as.data.table(cbind(datax,datay,subject))
-
+	setkeyv(data, c("activity","subject"))
+	finaldata<-data[, lapply(.SD,mean), by =key(data)]
+		
 	if (save_to_file){
 		## Saving results
 		if (!file.exists(dest_dir)) {
@@ -80,15 +82,10 @@ run_analysis <- function(sour_dir="./",dest_dir="./",save_to_file=F){
 		### Saving complete merge data.
 		write.table(data,paste(dest_dir,"comletedata.txt",sep=""))
 		print(paste("Complete data saved to ",dest_dir,"comletedata.txt",sep=""))
-		finaldata<-data[, lapply(.SD,mean), by = "activity,subject"]
-		finaldata<-finaldata[order(finaldata[2]),]
+		
 		### Saving data set with the average of each variable for each activity and each subject.
 		write.table(finaldata[order(activity,subject)],paste(dest_dir,"finaldata.txt",sep=""))
 		print(paste("Complete data saved to ",dest_dir,"finaldata.txt",sep=""))
 	}	
 	return(finaldata[order(activity,subject)])
 }
-
-
-
-
