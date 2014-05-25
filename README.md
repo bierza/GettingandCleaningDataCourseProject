@@ -20,6 +20,7 @@ Function run_analysis from R script called run_analysis.R that does the followin
 1. Download "run_analysis.R" to working directory of R console.
 2. Load script to your console *source("run_analysis.R")*.
 3. Run function run_analysis *data<-run_analysis()*
+
 **What happens:**
 - run_analysis() put tidy data set with the average of each variable for each activity and each subject to variable data.
 
@@ -27,6 +28,7 @@ Function run_analysis from R script called run_analysis.R that does the followin
 1. Download "run_analysis.R"
 2. Load script to your console *source("run_analysis.R")*.
 3. Run function run_analysis *data<-run_analysis(sour_dir="./loaddata/",dest_dir="./savedata/",save_to_file=T)*
+
 **What happens:**
 - load data from directory "./loaddata/"
 - run_analysis() put tidy data set with the average of each variable for each activity and each subject to variable data.
