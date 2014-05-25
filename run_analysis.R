@@ -69,7 +69,7 @@ run_analysis <- function(sour_dir="./",dest_dir="./",save_to_file=F){
 	c<-grep("std|mean",b)
 	datax<-x[,c]
 
-	## One dataset from Y, X, activity and subject files 
+	## One dataset from X, activity and subject files 
 	data<-as.data.table(cbind(datax,datay,subject))
 	setkeyv(data, c("activity","subject"))
 	finaldata<-data[, lapply(.SD,mean), by =key(data)]
