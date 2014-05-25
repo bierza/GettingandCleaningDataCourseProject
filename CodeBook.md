@@ -20,6 +20,12 @@ Data are reading from local directory or url source. Url source would use when t
 <pre><code>y<-rbind(y_test,y_train)
 x<-rbind(x_test,x_train)
 subject<-rbind(subject_test,subject_train)</code></pre>
+2. Prepare English-like descriptive names of columns. The names have all letters small. The names are without symbol like "[-(),]"
+<pre><code>#### all letters are small 
+a<-tolower(features[,2])
+#### all names are without characters "[-(),]" 
+b<-gsub("[-(),]","",a)
+names(x)<-b</code></pre>
 
 
 
